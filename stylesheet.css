@@ -1,0 +1,197 @@
+/*for header of webpage*/
+header{
+    background-color: lightgray;
+    /* i set the overflow as hidden so that any content that overflows will just be  hidden / cut off */
+    overflow: hidden;
+    /* i set the width as auto so that it fills to each side of the webpage */
+    width:100%;
+    /* i set the padding top so that instead of adding padding to every side it just adds it to the top side which keeps the left and right sides slim */
+    padding-top: 10px;
+    /* i set the margin to 0px so that it would remove any white lines around the edges of the website */
+    margin: auto;
+    color: black;
+    /* i added display block so it becomes its own entity instead of potentially wrapping with other idems on the page */
+    display:block;
+    /* i added text align center so that the text is in the center of the header */
+    text-align: center;
+    font-size: 50px;
+    /* i set the padding bottom to 0px because i have added a menu which blends with the header and if i added bottom padding it would make the header look very thick */
+    padding-bottom:0px;
+    font-family: 'Titillium Web', sans-serif;
+
+}
+html{
+    /* i added this so my header and footer would reach both sides of the webpage without a gap on the side*/
+ margin: 0px;
+ /* i added this to give the background of my webpage an image instead of being plane white */
+    background-image: url(shrunken%20image%203.jpg);
+     background-blend-mode:darken;
+     /* this is so that my backround covers the entire webpage instead of shrinking to fit , this just makes it look nicer */
+      background-size: cover;
+    height: auto;
+}
+
+/*for navigation menu in header*/
+.topnav{
+    background-color: lightgray;
+    font-style: oblique;
+    overflow: hidden;
+
+}
+/* for styling the links ov navigation menu*/
+.topnav a {
+   float: left;
+    color: black;
+    text-align: center;
+    padding: 6px 16px;
+    font-size: 17px;
+    font-family: 'Titillium Web', sans-serif;
+    /*i set the text decoration as none to remove underlining     */
+    text-decoration: none;
+
+}
+/* this is so that the colour of the menu changes when i hover over it */
+.topnav a:hover{
+    background-color: darkgray;
+    color: black;
+}
+/* this is so my footer displays and sticks to the bottom of my webpage*/
+footer{
+    background-color: lightgray;
+    width:auto;
+    margin: 0px;
+    color: black;
+    text-align: center;
+    font-size: 10px;
+    padding-bottom:10px;
+    font-family: 'Titillium Web', sans-serif;
+    padding: 20px;
+    height: 20px;
+}
+html,body{
+    /* this is so that there are no white lines/ borders around my page*/
+margin: 0px;
+
+}
+.content {
+    /* this auto adjusts the page page height and keeps the footer in the bottom of the page*/
+    min-height: calc(100vh - 70px);
+    padding: 40px 40px 0 40px;
+  }
+  /*this is so that my text displays in the center*/
+.displaycenter{
+    display: grid;
+    align-content: center;
+    text-align: center;
+    font-family: 'KoHo', sans-serif;
+    color: white;
+    font-size: 25px;
+}
+/* this is so that my text displays in the center in a larger font than the previous div*/
+.displaycenterlarge{
+    display: grid;
+    align-content: center;
+    text-align: center;
+    font-family: 'KoHo', sans-serif;
+    color: white;
+    font-size: 35px;
+}
+/* this is so my text displays on the left side*/
+.displayleft{
+    display: grid;
+    align-content: center;
+    text-align: left;
+    font-family: 'KoHo', sans-serif;
+    color: white;
+    font-size: 25px;
+    background-color: rgba(77, 77, 77, 0.2);
+}
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display:none}
+img {vertical-align: middle;}
+
+/* this is the container for my slideshow*/
+.slideshow-container{
+max-width: 1000px;
+position: relative;
+margin: auto;
+}
+/* the fowards and back buttons*/
+.prev, .next{ 
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+/* so that i can set the position of the next button to the right*/
+.next {
+ right: 0;
+ border-radius: 0 3px 3px 0;
+}
+/* so that when the user hovers over the button there is a slight black tint*/
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+
+  /* formating for the caption text*/
+  .text{
+      color: #f2f2f2;
+      font-size: 15px;
+      padding: 8px 12px;
+      position: absolute;
+      bottom: 8px;
+      width: 100%;
+      text-align: center;
+  }
+  /* formating of the text displaying the users number placment*/
+  .numbertext{
+      color: #f2f2f2;
+      font-size: 12px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 0;
+  }
+  /* the formating for the navigation dots*/ 
+  .dot{
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+    /* this is so that when the dot is being hovered over it changes color*/
+    .active, .dot:hover{
+        background-color: #717171;
+    }
+    /* the fading animation */
+    .fade{
+        -webkit-animation-name:fade ;
+        -webkit-animation-duration: 1.5s;
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+    /* makes the animation work*/
+    @-webkit-keyframes fade{
+        from {opacity: .4}
+        to {opacity: 1}
+    }
+    @keyframes fade{
+        from {opacity: .4} 
+        to {opacity: 1}
+    }
+    /*decreses the text size on smaller screens*/
+    @media only screen and (max-width: 300px) {
+        .prev, .next,.text {font-size: 11px}
+      }
